@@ -5,7 +5,7 @@ import autores from "./autoresRoutes.js"
 
 const routes = (app) => {
   app.route('/').get((req, res) => {
-    res.status(200).send({titulo: "Curso de node"})
+    res.status(200).sendFile('index.html', { root: './src/views' });
   })
 
   app.use(
